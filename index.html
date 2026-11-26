@@ -270,16 +270,35 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </div>
       </article>
 
-      <article class="card">
-        <span class="kicker mono">Deep Learning · Imagerie médicale</span>
-        <h3>Alzheimer MRI Classifier</h3>
-        <p>Classification d’IRM cérébrales liée à la maladie d’Alzheimer, avec un modèle Keras entraîné et un tableau de bord Streamlit conteneurisé avec Docker.</p>
-        <div class="viz">
-          <span class="mono">Pipeline</span>
-          <div class="pipe"><span>IRM</span><em>→</em><span>CNN (.h5)</span><em>→</em><span>Streamlit</span><em>→</em><span>Docker</span></div>
+      <article class="card feature">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div class="card-top"><span class="kicker mono">Deep Learning · Imagerie médicale</span><span class="status-pill">Audit + v2</span></div>
+          <h3>Alzheimer MRI Classifier : quand 99&nbsp;% cache une fuite</h3>
+          <p>Classification de coupes IRM en 4 stades de démence. En auditant le premier modèle (99 % d’accuracy), j’ai découvert que la plupart des images de test avaient un quasi-doublon dans l’entraînement. J’ai reconstruit le pipeline pour mesurer la vraie performance.</p>
+          <ul class="points">
+            <li>Détection de la fuite par perceptual hashing : ~93 % des images de validation dupliquées dans le train</li>
+            <li>Split par groupes de quasi-doublons (hash invariant au miroir, leader clustering)</li>
+            <li>Transfer learning MobileNetV2 en 2 phases sur GPU T4, label smoothing, class weights</li>
+            <li>Dashboard Streamlit avec explicabilité Grad-CAM, conteneurisé avec Docker</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Grad-CAM</span><span class="tag">Streamlit</span><span class="tag">Docker</span></div>
+          <a class="repo" href="https://github.com/Hayet-belloumi/alzeihmer">github.com/Hayet-belloumi/alzeihmer →</a>
         </div>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Keras</span><span class="tag">Streamlit</span><span class="tag">Docker</span></div>
-        <a class="repo" href="https://github.com/Hayet-belloumi/alzeihmer">github.com/Hayet-belloumi/alzeihmer →</a>
+        <div class="viz" aria-label="Avant et après la correction de la fuite">
+          <span class="mono">Accuracy · avant vs après correction</span>
+          <div class="bars">
+            <div class="bar"><span>Avant</span><b class="min" style="width:99%"></b><span>99,2 %</span></div>
+            <div class="bar"><span>Après</span><b style="width:67.5%"></b><span>67,5 %</span></div>
+          </div>
+          <div class="facts" style="margin-top:16px;padding:4px 16px">
+            <dl>
+              <div><dt>Images de test (jamais vues)</dt><dd style="font-size:22px">6&nbsp;958</dd></div>
+              <div><dt>Balanced accuracy</dt><dd style="font-size:22px">72,8&nbsp;%</dd></div>
+              <div><dt>ROC-AUC (one-vs-rest)</dt><dd style="font-size:22px">0,90</dd></div>
+              <div><dt>Doublons val → train détectés</dt><dd style="font-size:22px">~93&nbsp;%</dd></div>
+            </dl>
+          </div>
+        </div>
       </article>
 
       <article class="card">
