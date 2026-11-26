@@ -301,25 +301,36 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </div>
       </article>
 
-      <article class="card">
-        <span class="kicker mono">Open data · CDC BRFSS 2015</span>
-        <h3>Diabetes Health Indicators</h3>
-        <p>Nettoyage, structuration et documentation (principes FAIR) d’un jeu de données de santé publié sur Kaggle, en trois variantes de la cible.</p>
-        <div class="viz">
-          <span class="mono">Fichiers publiés</span>
-          <div class="tablewrap">
-          <table class="scd">
-            <thead><tr><th>variante</th><th>lignes</th><th>cible</th></tr></thead>
-            <tbody>
-              <tr><td>binary</td><td>253 680</td><td>0 / 1</td></tr>
-              <tr><td>5050split</td><td>70 692</td><td>équilibrée</td></tr>
-              <tr><td>012</td><td>253 680</td><td>0 / 1 / 2</td></tr>
-            </tbody>
-          </table>
+      <article class="card feature">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div class="card-top"><span class="kicker mono">Machine Learning · Santé publique · CDC BRFSS 2015</span><span class="status-pill">v2</span></div>
+          <h3>Dépistage du diabète : le seuil avant le modèle</h3>
+          <p>Prédiction du risque de diabète sur 229&nbsp;474 répondants (15&nbsp;% de diabétiques). Au seuil par défaut (0,5), le meilleur modèle ne détectait que 17&nbsp;% des malades : le levier principal était le seuil de décision, pas seulement l’algorithme.</p>
+          <ul class="points">
+            <li>Comparaison Random Forest, régression logistique et LightGBM en validation croisée stratifiée</li>
+            <li>Seuils choisis sur les prédictions out-of-fold, sans toucher au test (F1 max et mode dépistage)</li>
+            <li>Explicabilité SHAP : santé perçue, hypertension, âge, IMC et cholestérol en tête</li>
+            <li>Pipeline reproductible en une commande, dataset publié sur Kaggle (CC0)</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">LightGBM</span><span class="tag">SHAP</span><span class="tag">Kaggle</span></div>
+          <a class="repo" href="https://github.com/Hayet-belloumi/diabetes-cdc">github.com/Hayet-belloumi/diabetes-cdc →</a>
+        </div>
+        <div class="viz" aria-label="Diabétiques détectés selon le seuil">
+          <span class="mono">Diabétiques détectés (rappel, test)</span>
+          <div class="bars">
+            <div class="bar"><span>Seuil 0,5</span><b class="min" style="width:17%"></b><span>17&nbsp;%</span></div>
+            <div class="bar"><span>F1 max</span><b style="width:64%"></b><span>64&nbsp;%</span></div>
+            <div class="bar"><span>Dépistage</span><b style="width:81%"></b><span>81&nbsp;%</span></div>
+          </div>
+          <div class="facts" style="margin-top:16px;padding:4px 16px">
+            <dl>
+              <div><dt>Personnes en test</dt><dd style="font-size:22px">45&nbsp;895</dd></div>
+              <div><dt>ROC-AUC (LightGBM)</dt><dd style="font-size:22px">0,82</dd></div>
+              <div><dt>PR-AUC (hasard&nbsp;: 0,15)</dt><dd style="font-size:22px">0,45</dd></div>
+              <div><dt>F1 diabétiques (vs seuil 0,5)</dt><dd style="font-size:22px">0,47<small>vs 0,27</small></dd></div>
+            </dl>
           </div>
         </div>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Kaggle</span><span class="tag">CC0</span></div>
-        <a class="repo" href="https://github.com/Hayet-belloumi/diabetes-cdc">github.com/Hayet-belloumi/diabetes-cdc →</a>
       </article>
 
       <article class="card">
