@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hayet Belloumi – Portfolio</title>
+<title>Hayet Balloumi – Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -182,13 +182,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <header class="wrap hero" id="top">
   <div>
     <span class="status mono"><i></i>Disponible · stage PFE 2027</span>
-    <h1>Hayet<br><em>Belloumi</em></h1>
+    <h1>Hayet<br><em>Balloumi</em></h1>
     <p class="role">Data Scientist | Machine Learning, scoring &amp; recommandation | Python · LightGBM · PySpark</p>
-    <p class="lede">Étudiante en Master 2 Data Science à l’ISIMM, issue d’une licence en mathématiques appliquées. Je construis des modèles prédictifs sur des données tabulaires volumineuses et déséquilibrées, et les pipelines de données qui les alimentent. Je cherche un stage PFE en recommandation et analyse client.</p>
+    <p class="lede">Étudiante en Master 2 Data Science à l’ISIMM, issue d’une licence en mathématiques appliquées. Passionnée par l’analyse de données et le machine learning, motivée, curieuse et rigoureuse, avec un réel goût pour le travail en équipe et l’apprentissage continu. <strong>Disponible pour un stage de fin d’études (PFE 2027) en data science.</strong></p>
     <div class="cta">
       <a class="btn primary" href="#projets">Voir les projets</a>
       <a class="btn" href="https://github.com/Hayet-belloumi">GitHub</a>
-      <a class="btn" href="https://www.linkedin.com/in/hayet-belloumi">LinkedIn</a>
+      <a class="btn" href="https://www.linkedin.com/in/hayet-balloumi-457070230/">LinkedIn</a>
     </div>
   </div>
   <div class="side">
@@ -198,7 +198,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div><dt>Lignes modélisées (compétition ML)</dt><dd>690 000</dd></div>
       <div><dt>Projets techniques</dt><dd>6</dd></div>
       <div><dt>Certifications NVIDIA</dt><dd>2</dd></div>
-      <div><dt>Éditions Cyberbot organisées</dt><dd>4<small>v1.0→v4.0</small></dd></div>
+      <div><dt>Éditions Cyberbot organisées</dt><dd>3<small>1.0→3.0</small></dd></div>
       <div><dt>Basée à</dt><dd style="font-size:18px">Sidi Bouzid, TN</dd></div>
     </dl>
   </aside>
@@ -244,10 +244,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
       <article class="card feature">
         <div style="display:flex;flex-direction:column;gap:14px">
-          <span class="kicker mono">Compétition de Machine Learning</span>
-          <h3>Classification multiclasse sur données déséquilibrées</h3>
+          <span class="kicker mono">Compétition Kaggle · Playground Series S6E7</span>
+          <h3>Prédiction du risque de santé&nbsp;: classification multiclasse</h3>
           <p>Modèle prédictif sur 690 000 lignes aux classes fortement déséquilibrées, avec une logique de scoring d’appétence produit transposable à la recommandation client.</p>
           <ul class="points">
+            <li><strong>Accuracy de 0,949</strong> au classement final, sur 3&nbsp;355 équipes</li>
             <li>Feature engineering ciblé sur les variables tabulaires</li>
             <li>Validation croisée stratifiée pour préserver la distribution des classes</li>
             <li>Ensemble par mélange de probabilités (LightGBM, XGBoost, CatBoost)</li>
@@ -273,7 +274,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <article class="card feature">
         <div style="display:flex;flex-direction:column;gap:14px">
           <div class="card-top"><span class="kicker mono">Deep Learning · Imagerie médicale</span><span class="status-pill">Audit + v2</span></div>
-          <h3>Alzheimer MRI Classifier : quand 99&nbsp;% cache une fuite</h3>
+          <h3>Alzheimer MRI Classifier&nbsp;: quand 99&nbsp;% cache une fuite</h3>
           <p>Classification de coupes IRM en 4 stades de démence. En auditant le premier modèle (99 % d’accuracy), j’ai découvert que la plupart des images de test avaient un quasi-doublon dans l’entraînement. J’ai reconstruit le pipeline pour mesurer la vraie performance.</p>
           <ul class="points">
             <li>Détection de la fuite par perceptual hashing : ~93 % des images de validation dupliquées dans le train</li>
@@ -282,7 +283,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
             <li>Dashboard Streamlit avec explicabilité Grad-CAM, conteneurisé avec Docker</li>
           </ul>
           <div class="tags"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Grad-CAM</span><span class="tag">Streamlit</span><span class="tag">Docker</span></div>
-          <a class="repo" href="https://github.com/Hayet-belloumi/alzeihmer">github.com/Hayet-belloumi/alzeihmer →</a>
+          <a class="repo" href="https://github.com/Hayet-belloumi/alzheimer-mri-classifier">github.com/Hayet-belloumi/alzheimer-mri-classifier →</a>
         </div>
         <div class="viz" aria-label="Avant et après la correction de la fuite">
           <span class="mono">Accuracy · avant vs après correction</span>
@@ -304,7 +305,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <article class="card feature">
         <div style="display:flex;flex-direction:column;gap:14px">
           <div class="card-top"><span class="kicker mono">Machine Learning · Santé publique · CDC BRFSS 2015</span><span class="status-pill">v2</span></div>
-          <h3>Dépistage du diabète : le seuil avant le modèle</h3>
+          <h3>Dépistage du diabète&nbsp;: le seuil avant le modèle</h3>
           <p>Prédiction du risque de diabète sur 229&nbsp;474 répondants (15&nbsp;% de diabétiques). Au seuil par défaut (0,5), le meilleur modèle ne détectait que 17&nbsp;% des malades : le levier principal était le seuil de décision, pas seulement l’algorithme.</p>
           <ul class="points">
             <li>Comparaison Random Forest, régression logistique et LightGBM en validation croisée stratifiée</li>
@@ -394,13 +395,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         </ol>
         <h3 class="col-title" style="margin-top:12px">Expérience</h3>
         <ol class="tl">
+          <li><span class="when">06/2026</span><h4>Stagiaire · Laboratoire de recherche</h4><p class="where">Faculté de Médecine de Monastir</p><p>Rédaction de deux rapports : préparation des datasets médicaux selon les principes FAIR (anonymisation, nettoyage, split stratifié, documentation), et structure des articles médicaux (IMRAD) avec une comparaison de 3 bases de données (MIMIC-IV, eICU-CRD, CDC BRFSS).</p></li>
           <li><span class="when">2023 – 2025</span><h4>Enseignante de soutien en mathématiques</h4><p class="where">École privée</p><p>Cours pour collégiens et lycéens, avec suivi personnalisé.</p></li>
         </ol>
       </div>
       <div class="col">
         <h3 class="col-title">Engagement associatif</h3>
         <ol class="tl">
-          <li><span class="when">2022 – 2025</span><h4>Club CPU · Robotique &amp; Développement Web</h4><p class="where">Membre actif → Cheffe du Comité Junior → Secrétaire Générale</p><p>Organisation de 4 éditions de la compétition Cyberbot (v1.0 à v4.0), coordination avec l’administration, encadrement et formation de l’équipe junior.</p></li>
+          <li class="now"><span class="when">2026 – présent</span><h4>Compétition CybeRocket 1.0</h4><p class="where">Assistante · Comité des affaires externes</p><p>Prise de contact avec des invités de marque et des participants internationaux pour la première édition.</p></li>
+          <li><span class="when">2022 – 2025</span><h4>Club CPU · Robotique &amp; Développement Web</h4><p class="where">Membre actif → Cheffe du Comité Junior → Secrétaire Générale</p><p>Organisation de 3 éditions de la compétition Cyberbot (1.0, 2.0 et 3.0), coordination avec l’administration, encadrement et formation de l’équipe junior.</p></li>
         </ol>
         <h3 class="col-title" style="margin-top:12px">Certifications</h3>
         <div class="certs">
@@ -430,7 +433,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <li><span>Email</span><span><a href="mailto:hayetbelloumi2021@gmail.com">hayetbelloumi2021@gmail.com</a><button class="copy" type="button" id="copy-email" data-copy="hayetbelloumi2021@gmail.com">Copier</button></span></li>
         <li><span>Téléphone</span><span>+216 50 584 569</span></li>
         <li><span>GitHub</span><a href="https://github.com/Hayet-belloumi">github.com/Hayet-belloumi</a></li>
-        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/hayet-belloumi">in/hayet-belloumi</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/hayet-balloumi-457070230/">in/hayet-balloumi</a></li>
       </ul>
     </div>
   </div>
@@ -438,7 +441,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </main>
 
 <footer>
-  <div class="wrap"><span>© 2026 Hayet Belloumi</span><span class="mono">Sidi Bouzid · Monastir, Tunisie</span></div>
+  <div class="wrap"><span>© 2026 Hayet Balloumi</span><span class="mono">Sidi Bouzid · Monastir, Tunisie</span></div>
 </footer>
 
 <script>
